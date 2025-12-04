@@ -15,8 +15,12 @@ dest_files=["res://.godot/imported/ybot.blend-23c75a3c902935809a8b283036dfbb3f.s
 
 nodes/root_type="Node3D"
 nodes/root_name="Scene Root"
+nodes/root_script=null
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
 meshes/ensure_tangents=true
 meshes/generate_lods=true
 meshes/create_shadow_meshes=true
@@ -28,7 +32,11 @@ animation/import=true
 animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
 import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
 _subresources={
 "meshes": {
 "ybot-23c75a3c902935809a8b283036dfbb3f_Alpha_Joints": {
@@ -54,13 +62,12 @@ _subresources={
 },
 "nodes": {
 "PATH:Armature_004/Skeleton3D": {
-"retarget/bone_map": Resource("res://animations/bone_map.tres")
+"retarget/bone_map": Resource("uid://dkmy3sb0i54xw", "res://animations/bone_map.tres")
 }
 }
 }
-gltf/naming_version=0
-gltf/embedded_image_handling=1
 blender/nodes/visible=0
+blender/nodes/active_collection_only=false
 blender/nodes/punctual_lights=true
 blender/nodes/cameras=true
 blender/nodes/custom_properties=true
@@ -68,6 +75,7 @@ blender/nodes/modifiers=1
 blender/meshes/colors=false
 blender/meshes/uvs=true
 blender/meshes/normals=true
+blender/meshes/export_geometry_nodes_instances=false
 blender/meshes/tangents=true
 blender/meshes/skins=2
 blender/meshes/export_bones_deforming_mesh_only=false
@@ -76,3 +84,4 @@ blender/materials/export_materials=1
 blender/animation/limit_playback=true
 blender/animation/always_sample=true
 blender/animation/group_tracks=true
+gltf/naming_version=0

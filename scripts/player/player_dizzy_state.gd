@@ -65,9 +65,10 @@ func enter() -> void:
 	player.rotation_component.can_rotate = false
 	player.locomotion_component.set_active_strategy("root_motion")
 	player.character.dizzy_victim_animations.dizzy_from_parry()
-	
-	Globals.user_interface.hud.instability_bar.play_max_instability()
-	
+
+	if Globals.user_interface:
+		Globals.user_interface.hud.instability_bar.play_max_instability()
+
 	_skip_damage = false
 	if parent_state.previous_state is PlayerBlockState:
 		_skip_damage = true
@@ -96,10 +97,11 @@ func exit() -> void:
 	player.locomotion_component.set_active_strategy("programmatic")
 	player.character.dizzy_victim_animations.disable_blend_dizzy()
 	player.instability_component.come_out_of_full_instability(0)
-	
-	Globals.user_interface.hud.instability_bar.reset()
-	Globals.user_interface.hud.instability_bar.hide_bar()
-	
+
+	if Globals.user_interface:
+		Globals.user_interface.hud.instability_bar.reset()
+		Globals.user_interface.hud.instability_bar.hide_bar()
+
 	dizzy_stars.enabled = false
 	_dizzy_sfx_tween = create_tween()
 	_dizzy_sfx_tween.tween_property(

@@ -15,4 +15,4 @@ graph_offset = Vector2(-635, -14)
 "nodes/Energy Beam Speed/position" = Vector2(40, 140)
 "nodes/Energy Beam Trim/node" = SubResource("AnimationNodeTimeSeek_t11ec")
 "nodes/Energy Beam Trim/position" = Vector2(-200, 140)
-node_connections = [&"Energy Beam Speed", 0, &"Energy Beam Trim", &"Energy Beam Trim", 0, &"Energy Beam", &"output", 0, &"Energy Beam Speed"]
+node_connections = [&"output", 0, &"Energy Beam Speed", &"Energy Beam Speed", 0, &"Energy Beam Trim", &"Energy Beam Trim", 0, &"Energy Beam"]

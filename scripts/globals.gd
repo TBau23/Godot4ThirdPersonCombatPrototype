@@ -1,7 +1,7 @@
 extends Node
 
 var player : Player
-var camera_controller: CameraController
+var camera_controller  # Untyped to allow CameraController or TrainingCameraController
 var lock_on_system: LockOnSystem
 var backstab_system: BackstabSystem
 var dizzy_system: DizzySystem

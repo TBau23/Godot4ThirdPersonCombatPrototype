@@ -15,4 +15,4 @@ graph_offset = Vector2(-721.661, -95.3223)
 "nodes/Big Projectile Speed/position" = Vector2(40, 140)
 "nodes/Big Projectile Trim/node" = SubResource("AnimationNodeTimeSeek_p52w5")
 "nodes/Big Projectile Trim/position" = Vector2(-200, 140)
-node_connections = [&"Big Projectile Speed", 0, &"Big Projectile Trim", &"Big Projectile Trim", 0, &"Big Projectile", &"output", 0, &"Big Projectile Speed"]
+node_connections = [&"output", 0, &"Big Projectile Speed", &"Big Projectile Speed", 0, &"Big Projectile Trim", &"Big Projectile Trim", 0, &"Big Projectile"]

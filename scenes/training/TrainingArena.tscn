@@ -1,0 +1,68 @@
+[gd_scene load_steps=11 format=3 uid="uid://training_arena_001"]
+
+[ext_resource type="Script" path="res://scripts/training/training_arena.gd" id="1_arena"]
+[ext_resource type="PackedScene" uid="uid://dujukbu10vbmm" path="res://scenes/entities/Player.tscn" id="2_player"]
+[ext_resource type="PackedScene" uid="uid://xg0hjxcilbsl" path="res://scenes/systems/LockOnSystem.tscn" id="3_lockon"]
+[ext_resource type="PackedScene" uid="uid://chqo23127k51m" path="res://scenes/systems/VoidDeathSystem.tscn" id="4_void"]
+[ext_resource type="Script" path="res://scripts/systems/backstab_system.gd" id="5_backstab"]
+[ext_resource type="Script" path="res://scripts/systems/dizzy_system.gd" id="6_dizzy"]
+[ext_resource type="Script" path="res://scripts/training/training_camera_controller.gd" id="7_camctrl"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_floor"]
+size = Vector3(20, 1, 20)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_floor"]
+albedo_color = Color(0.3, 0.3, 0.35, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_floor"]
+size = Vector3(20, 1, 20)
+material = SubResource("StandardMaterial3D_floor")
+
+[node name="TrainingArena" type="Node3D" node_paths=PackedStringArray("player1", "player2", "camera_controller", "lock_on_system", "backstab_system", "dizzy_system", "void_death_system")]
+script = ExtResource("1_arena")
+player1 = NodePath("Player1")
+player2 = NodePath("Player2")
+camera_controller = NodePath("CameraController")
+lock_on_system = NodePath("LockOnSystem")
+backstab_system = NodePath("BackstabSystem")
+dizzy_system = NodePath("DizzySystem")
+void_death_system = NodePath("VoidDeathSystem")
+
+[node name="Floor" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+shape = SubResource("BoxShape3D_floor")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+mesh = SubResource("BoxMesh_floor")
+
+[node name="CameraController" type="Node3D" parent="." node_paths=PackedStringArray("cam")]
+script = ExtResource("7_camctrl")
+cam = NodePath("Camera3D")
+
+[node name="Camera3D" type="Camera3D" parent="CameraController"]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 12, 12)
+current = true
+fov = 60.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.819796, 0.154633, 0.551382, -0.555326, 0.449744, 0.699531, -0.13981, -0.87967, 0.45457, 0, 10, 0)
+light_color = Color(1, 0.98, 0.9, 1)
+shadow_enabled = true
+
+[node name="Player1" parent="." instance=ExtResource("2_player")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+
+[node name="Player2" parent="." instance=ExtResource("2_player")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 3, 0, 0)
+
+[node name="LockOnSystem" parent="." instance=ExtResource("3_lockon")]
+
+[node name="VoidDeathSystem" parent="." instance=ExtResource("4_void")]
+
+[node name="BackstabSystem" type="Node3D" parent="."]
+script = ExtResource("5_backstab")
+
+[node name="DizzySystem" type="Node3D" parent="."]
+script = ExtResource("6_dizzy")

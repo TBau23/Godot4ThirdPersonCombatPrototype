@@ -153,7 +153,7 @@ nodes/Animation/node = SubResource("AnimationNodeAnimation_gmvi0")
 nodes/Animation/position = Vector2(-240, 120)
 nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_to2pe")
 nodes/TimeScale/position = Vector2(120, 120)
-node_connections = [&"TimeScale", 0, &"Animation", &"output", 0, &"TimeScale"]
+node_connections = [&"output", 0, &"TimeScale", &"TimeScale", 0, &"Animation"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2o0sj"]
 animation = &"movement_animations_1/Walk-Right"
@@ -166,7 +166,7 @@ nodes/Animation/node = SubResource("AnimationNodeAnimation_2o0sj")
 nodes/Animation/position = Vector2(-340, 120)
 nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_ee4p2")
 nodes/TimeScale/position = Vector2(80, 120)
-node_connections = [&"TimeScale", 0, &"Animation", &"output", 0, &"TimeScale"]
+node_connections = [&"output", 0, &"TimeScale", &"TimeScale", 0, &"Animation"]
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_pudql"]
 blend_point_0/node = SubResource("AnimationNodeAnimation_dotnv")
@@ -200,7 +200,7 @@ graph_offset = Vector2(-667.364, -61.4545)
 "nodes/Zombie Kick Speed/position" = Vector2(0, 140)
 "nodes/Zombie Kick Trim/node" = SubResource("AnimationNodeTimeSeek_dufa1")
 "nodes/Zombie Kick Trim/position" = Vector2(-320, 140)
-node_connections = [&"Zombie Kick Speed", 0, &"Zombie Kick Trim", &"Zombie Kick Trim", 0, &"Zombie Kick", &"output", 0, &"Zombie Kick Speed"]
+node_connections = [&"output", 0, &"Zombie Kick Speed", &"Zombie Kick Speed", 0, &"Zombie Kick Trim", &"Zombie Kick Trim", 0, &"Zombie Kick"]
 
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_qbrnj"]
 
@@ -217,7 +217,7 @@ graph_offset = Vector2(-579, -38)
 "nodes/Zombie Kick Speed/position" = Vector2(-20, 140)
 "nodes/Zombie Kick Trim/node" = SubResource("AnimationNodeTimeSeek_hnxps")
 "nodes/Zombie Kick Trim/position" = Vector2(-300, 140)
-node_connections = [&"Zombie Kick Speed", 0, &"Zombie Kick Trim", &"Zombie Kick Trim", 0, &"Zombie Kick", &"output", 0, &"Zombie Kick Speed"]
+node_connections = [&"output", 0, &"Zombie Kick Speed", &"Zombie Kick Speed", 0, &"Zombie Kick Trim", &"Zombie Kick Trim", 0, &"Zombie Kick"]
 
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_kaeu2"]
 
@@ -228,14 +228,14 @@ animation = &"zombie_animations_1/Zombie Smack Left"
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_wmxk2"]
 graph_offset = Vector2(-818.709, -32.9487)
+nodes/output/position = Vector2(320, 144)
 "nodes/Zombie Smack/node" = SubResource("AnimationNodeAnimation_1rhce")
 "nodes/Zombie Smack/position" = Vector2(-600, 140)
 "nodes/Zombie Smack Speed/node" = SubResource("AnimationNodeTimeScale_kaeu2")
 "nodes/Zombie Smack Speed/position" = Vector2(64, 144)
 "nodes/Zombie Smack Trim/node" = SubResource("AnimationNodeTimeSeek_g1a58")
 "nodes/Zombie Smack Trim/position" = Vector2(-176, 144)
-nodes/output/position = Vector2(320, 144)
-node_connections = [&"Zombie Smack Speed", 0, &"Zombie Smack Trim", &"Zombie Smack Trim", 0, &"Zombie Smack", &"output", 0, &"Zombie Smack Speed"]
+node_connections = [&"output", 0, &"Zombie Smack Speed", &"Zombie Smack Speed", 0, &"Zombie Smack Trim", &"Zombie Smack Trim", 0, &"Zombie Smack"]
 
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_a3bqr"]
 
@@ -252,7 +252,7 @@ graph_offset = Vector2(-803.824, 37.4624)
 "nodes/Zombie Smack Speed/position" = Vector2(32, 144)
 "nodes/Zombie Smack Trim/node" = SubResource("AnimationNodeTimeSeek_6uohh")
 "nodes/Zombie Smack Trim/position" = Vector2(-229.594, 153.772)
-node_connections = [&"Zombie Smack Speed", 0, &"Zombie Smack Trim", &"Zombie Smack Trim", 0, &"Zombie Smack", &"output", 0, &"Zombie Smack Speed"]
+node_connections = [&"output", 0, &"Zombie Smack Speed", &"Zombie Smack Speed", 0, &"Zombie Smack Trim", &"Zombie Smack Trim", 0, &"Zombie Smack"]
 
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_eawa6"]
 
@@ -269,7 +269,7 @@ graph_offset = Vector2(-587.618, -45.7664)
 "nodes/Zombie Smash Speed/position" = Vector2(0, 140)
 "nodes/Zombie Smash Trim/node" = SubResource("AnimationNodeTimeSeek_s41jc")
 "nodes/Zombie Smash Trim/position" = Vector2(-300, 140)
-node_connections = [&"Zombie Smash Speed", 0, &"Zombie Smash Trim", &"Zombie Smash Trim", 0, &"Zombie Smash", &"output", 0, &"Zombie Smash Speed"]
+node_connections = [&"output", 0, &"Zombie Smash Speed", &"Zombie Smash Speed", 0, &"Zombie Smash Trim", &"Zombie Smash Trim", 0, &"Zombie Smash"]
 
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_d561o"]
 
@@ -286,10 +286,11 @@ graph_offset = Vector2(-573, -66)
 "nodes/Zombie Smash Speed/position" = Vector2(20, 140)
 "nodes/Zombie Smash Trim/node" = SubResource("AnimationNodeTimeSeek_yljqk")
 "nodes/Zombie Smash Trim/position" = Vector2(-240, 140)
-node_connections = [&"Zombie Smash Speed", 0, &"Zombie Smash Trim", &"Zombie Smash Trim", 0, &"Zombie Smash", &"output", 0, &"Zombie Smash Speed"]
+node_connections = [&"output", 0, &"Zombie Smash Speed", &"Zombie Smash Speed", 0, &"Zombie Smash Trim", &"Zombie Smash Trim", 0, &"Zombie Smash"]
 
 [resource]
 graph_offset = Vector2(48.6638, 388.701)
+nodes/output/position = Vector2(5380, 900)
 nodes/Death/node = SubResource("AnimationNodeBlend2_3rnpj")
 nodes/Death/position = Vector2(4640, 1200)
 "nodes/Death 1 Speed/node" = SubResource("AnimationNodeTimeScale_era1v")
@@ -360,5 +361,4 @@ nodes/Movement/position = Vector2(340, 560)
 "nodes/Zombie Smash/position" = Vector2(560, 1200)
 "nodes/Zombie Smash Copy/node" = SubResource("AnimationNodeBlendTree_366vf")
 "nodes/Zombie Smash Copy/position" = Vector2(520, 1320)
-nodes/output/position = Vector2(5380, 900)
-node_connections = [&"Death", 0, &"Dizzy", &"Death", 1, &"Death Which One", &"Death 1 Speed", 0, &"Death 1 Trim", &"Death 1 Trim", 0, &"Death Animation", &"Death 2 Speed", 0, &"Death 2 Trim", &"Death 2 Trim", 0, &"Death Backstab Animation", &"Death Which One", 0, &"Death 1 Speed", &"Death Which One", 1, &"Death 2 Speed", &"Dizzy", 0, &"Melee", &"Dizzy", 1, &"Dizzy Which One", &"Dizzy From Damage", 0, &"Dizzy Kneeling Speed", &"Dizzy From Damage", 1, &"Kneeling Idle Speed", &"Dizzy From Damage", 2, &"Kneel to Stand Speed", &"Dizzy Kneeling Speed", 0, &"Dizzy Kneeling Trim", &"Dizzy Kneeling Trim", 0, &"Dizzy Kneeling Animation", &"Dizzy Which One", 0, &"Dizzy Idle Animation", &"Dizzy Which One", 1, &"Dizzy From Damage", &"Idle", 0, &"Idle Inactive Animation", &"Idle", 1, &"Idle Active Animation", &"Kneel to Stand Speed", 0, &"Kneel to Stand Trim", &"Kneel to Stand Trim", 0, &"Kneel to Stand Animation", &"Kneeling Idle Speed", 0, &"Kneeling Idle Animation", &"Melee", 0, &"Movement", &"Melee", 1, &"Melee Attack", &"Melee Attack", 0, &"Zombie Smack", &"Melee Attack", 1, &"Zombie Smack Copy", &"Melee Attack", 2, &"Zombie Smash", &"Melee Attack", 3, &"Zombie Smash Copy", &"Melee Attack", 4, &"Zombie Kick", &"Melee Attack", 5, &"Zombie Kick Copy", &"Movement", 0, &"Idle", &"Movement", 1, &"Movement Method", &"Movement Method", 0, &"Walk Speed", &"Walk Speed", 0, &"Walk Direction", &"output", 0, &"Death"]
+node_connections = [&"output", 0, &"Death", &"Death", 0, &"Dizzy", &"Death", 1, &"Death Which One", &"Death 1 Speed", 0, &"Death 1 Trim", &"Death 1 Trim", 0, &"Death Animation", &"Death 2 Speed", 0, &"Death 2 Trim", &"Death 2 Trim", 0, &"Death Backstab Animation", &"Death Which One", 0, &"Death 1 Speed", &"Death Which One", 1, &"Death 2 Speed", &"Dizzy", 0, &"Melee", &"Dizzy", 1, &"Dizzy Which One", &"Dizzy From Damage", 0, &"Dizzy Kneeling Speed", &"Dizzy From Damage", 1, &"Kneeling Idle Speed", &"Dizzy From Damage", 2, &"Kneel to Stand Speed", &"Dizzy Kneeling Speed", 0, &"Dizzy Kneeling Trim", &"Dizzy Kneeling Trim", 0, &"Dizzy Kneeling Animation", &"Dizzy Which One", 0, &"Dizzy Idle Animation", &"Dizzy Which One", 1, &"Dizzy From Damage", &"Idle", 0, &"Idle Inactive Animation", &"Idle", 1, &"Idle Active Animation", &"Kneel to Stand Speed", 0, &"Kneel to Stand Trim", &"Kneel to Stand Trim", 0, &"Kneel to Stand Animation", &"Kneeling Idle Speed", 0, &"Kneeling Idle Animation", &"Melee", 0, &"Movement", &"Melee", 1, &"Melee Attack", &"Melee Attack", 0, &"Zombie Smack", &"Melee Attack", 1, &"Zombie Smack Copy", &"Melee Attack", 2, &"Zombie Smash", &"Melee Attack", 3, &"Zombie Smash Copy", &"Melee Attack", 4, &"Zombie Kick", &"Melee Attack", 5, &"Zombie Kick Copy", &"Movement", 0, &"Idle", &"Movement", 1, &"Movement Method", &"Movement Method", 0, &"Walk Speed", &"Walk Speed", 0, &"Walk Direction"]

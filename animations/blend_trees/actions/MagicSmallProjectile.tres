@@ -15,4 +15,4 @@ graph_offset = Vector2(-642, -35)
 "nodes/Small Projectile Scale/position" = Vector2(0, 140)
 "nodes/Small Projectile Trim/node" = SubResource("AnimationNodeTimeSeek_h5kt5")
 "nodes/Small Projectile Trim/position" = Vector2(-300, 140)
-node_connections = [&"Small Projectile Scale", 0, &"Small Projectile Trim", &"Small Projectile Trim", 0, &"Small Projectile", &"output", 0, &"Small Projectile Scale"]
+node_connections = [&"output", 0, &"Small Projectile Scale", &"Small Projectile Scale", 0, &"Small Projectile Trim", &"Small Projectile Trim", 0, &"Small Projectile"]

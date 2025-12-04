@@ -13,14 +13,14 @@ animation = &"combat_animations_1/Upward Thrust"
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_ws83a"]
 graph_offset = Vector2(-358.61, -3.69998)
+nodes/output/position = Vector2(540, 140)
 "nodes/Forward Thrust/node" = SubResource("AnimationNodeAnimation_nqkij")
 "nodes/Forward Thrust/position" = Vector2(-380, 180)
 "nodes/Forward Thrust Speed/node" = SubResource("AnimationNodeTimeScale_ljnnk")
 "nodes/Forward Thrust Speed/position" = Vector2(260, 140)
 "nodes/Forward Thrust Trim/node" = SubResource("AnimationNodeTimeSeek_6gi4v")
 "nodes/Forward Thrust Trim/position" = Vector2(20, 120)
-nodes/output/position = Vector2(540, 140)
-node_connections = [&"Forward Thrust Speed", 0, &"Forward Thrust Trim", &"Forward Thrust Trim", 0, &"Forward Thrust", &"output", 0, &"Forward Thrust Speed"]
+node_connections = [&"output", 0, &"Forward Thrust Speed", &"Forward Thrust Speed", 0, &"Forward Thrust Trim", &"Forward Thrust Trim", 0, &"Forward Thrust"]
 
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_sr615"]
 
@@ -42,6 +42,7 @@ animation = &"movement_animations_1/Walk-Forwards"
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_vau4f"]
 graph_offset = Vector2(-538.119, -51.8633)
+nodes/output/position = Vector2(540, 220)
 "nodes/Inward Slash/node" = SubResource("AnimationNodeAnimation_cu7nq")
 "nodes/Inward Slash/position" = Vector2(-660, 120)
 "nodes/Inward Slash Speed/node" = SubResource("AnimationNodeTimeScale_sr615")
@@ -56,8 +57,7 @@ graph_offset = Vector2(-538.119, -51.8633)
 "nodes/Walk Forwards Speed/position" = Vector2(-60, 360)
 "nodes/Walk Forwards Trim/node" = SubResource("AnimationNodeTimeSeek_g6veh")
 "nodes/Walk Forwards Trim/position" = Vector2(-300, 340)
-nodes/output/position = Vector2(540, 220)
-node_connections = [&"Inward Slash Speed", 0, &"Inward Slash Trim", &"Inward Slash Trim", 0, &"Inward Slash", &"Inward Slash and Walk Blend", 0, &"Inward Slash Speed", &"Inward Slash and Walk Blend", 1, &"Walk Forwards Speed", &"Walk Forwards Speed", 0, &"Walk Forwards Trim", &"Walk Forwards Trim", 0, &"Walk Forwards", &"output", 0, &"Inward Slash and Walk Blend"]
+node_connections = [&"output", 0, &"Inward Slash and Walk Blend", &"Inward Slash Speed", 0, &"Inward Slash Trim", &"Inward Slash Trim", 0, &"Inward Slash", &"Inward Slash and Walk Blend", 0, &"Inward Slash Speed", &"Inward Slash and Walk Blend", 1, &"Walk Forwards Speed", &"Walk Forwards Speed", 0, &"Walk Forwards Trim", &"Walk Forwards Trim", 0, &"Walk Forwards"]
 
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_m02a1"]
 
@@ -79,6 +79,7 @@ animation = &"movement_animations_1/Walk-Forwards"
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_kb1f6"]
 graph_offset = Vector2(-611.162, -56.9099)
+nodes/output/position = Vector2(500, 160)
 "nodes/Inward Slash/node" = SubResource("AnimationNodeAnimation_eno2e")
 "nodes/Inward Slash/position" = Vector2(-900, 80)
 "nodes/Inward Slash Speed/node" = SubResource("AnimationNodeTimeScale_m02a1")
@@ -93,8 +94,7 @@ graph_offset = Vector2(-611.162, -56.9099)
 "nodes/Walk Forwards Speed/position" = Vector2(-220, 280)
 "nodes/Walk Forwards Trim/node" = SubResource("AnimationNodeTimeSeek_xjju2")
 "nodes/Walk Forwards Trim/position" = Vector2(-460, 340)
-nodes/output/position = Vector2(500, 160)
-node_connections = [&"Inward Slash Speed", 0, &"Inward Slash Trim", &"Inward Slash Trim", 0, &"Inward Slash", &"Inward Slash and Walk Blend", 0, &"Inward Slash Speed", &"Inward Slash and Walk Blend", 1, &"Walk Forwards Speed", &"Walk Forwards Speed", 0, &"Walk Forwards Trim", &"Walk Forwards Trim", 0, &"Walk Forwards", &"output", 0, &"Inward Slash and Walk Blend"]
+node_connections = [&"output", 0, &"Inward Slash and Walk Blend", &"Inward Slash Speed", 0, &"Inward Slash Trim", &"Inward Slash Trim", 0, &"Inward Slash", &"Inward Slash and Walk Blend", 0, &"Inward Slash Speed", &"Inward Slash and Walk Blend", 1, &"Walk Forwards Speed", &"Walk Forwards Speed", 0, &"Walk Forwards Trim", &"Walk Forwards Trim", 0, &"Walk Forwards"]
 
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_n1atq"]
 
@@ -116,6 +116,7 @@ animation = &"movement_animations_1/Walk-Forwards"
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_omsaa"]
 graph_offset = Vector2(-589.493, 22.4363)
+nodes/output/position = Vector2(540, 180)
 "nodes/Outward Slash/node" = SubResource("AnimationNodeAnimation_sl8my")
 "nodes/Outward Slash/position" = Vector2(-780, 160)
 "nodes/Outward Slash Speed/node" = SubResource("AnimationNodeTimeScale_n1atq")
@@ -130,8 +131,7 @@ graph_offset = Vector2(-589.493, 22.4363)
 "nodes/Walk Forwards Speed/position" = Vector2(-120, 380)
 "nodes/Walk Forwards Trim/node" = SubResource("AnimationNodeTimeSeek_yj2l3")
 "nodes/Walk Forwards Trim/position" = Vector2(-380, 400)
-nodes/output/position = Vector2(540, 180)
-node_connections = [&"Outward Slash Speed", 0, &"Outward Slash Trim", &"Outward Slash Trim", 0, &"Outward Slash", &"Outward Slash and Walk Blend", 0, &"Outward Slash Speed", &"Outward Slash and Walk Blend", 1, &"Walk Forwards Speed", &"Walk Forwards Speed", 0, &"Walk Forwards Trim", &"Walk Forwards Trim", 0, &"Walk Forwards", &"output", 0, &"Outward Slash and Walk Blend"]
+node_connections = [&"output", 0, &"Outward Slash and Walk Blend", &"Outward Slash Speed", 0, &"Outward Slash Trim", &"Outward Slash Trim", 0, &"Outward Slash", &"Outward Slash and Walk Blend", 0, &"Outward Slash Speed", &"Outward Slash and Walk Blend", 1, &"Walk Forwards Speed", &"Walk Forwards Speed", 0, &"Walk Forwards Trim", &"Walk Forwards Trim", 0, &"Walk Forwards"]
 
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_01b7k"]
 
@@ -153,6 +153,7 @@ animation = &"movement_animations_1/Walk-Forwards"
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_jkck2"]
 graph_offset = Vector2(-448.682, 37.1487)
+nodes/output/position = Vector2(720, 160)
 "nodes/Outward Slash/node" = SubResource("AnimationNodeAnimation_0mxk6")
 "nodes/Outward Slash/position" = Vector2(-660, 140)
 "nodes/Outward Slash Speed/node" = SubResource("AnimationNodeTimeScale_01b7k")
@@ -167,8 +168,7 @@ graph_offset = Vector2(-448.682, 37.1487)
 "nodes/Walk Forwards Speed/position" = Vector2(40, 400)
 "nodes/Walk Forwards Trim/node" = SubResource("AnimationNodeTimeSeek_7i8xv")
 "nodes/Walk Forwards Trim/position" = Vector2(-280, 420)
-nodes/output/position = Vector2(720, 160)
-node_connections = [&"Outward Slash Speed", 0, &"Outward Slash Trim", &"Outward Slash Trim", 0, &"Outward Slash", &"Outward Slash and Walk Blend", 0, &"Outward Slash Speed", &"Outward Slash and Walk Blend", 1, &"Walk Forwards Speed", &"Walk Forwards Speed", 0, &"Walk Forwards Trim", &"Walk Forwards Trim", 0, &"Walk Forwards", &"output", 0, &"Outward Slash and Walk Blend"]
+node_connections = [&"output", 0, &"Outward Slash and Walk Blend", &"Outward Slash Speed", 0, &"Outward Slash Trim", &"Outward Slash Trim", 0, &"Outward Slash", &"Outward Slash and Walk Blend", 0, &"Outward Slash Speed", &"Outward Slash and Walk Blend", 1, &"Walk Forwards Speed", &"Walk Forwards Speed", 0, &"Walk Forwards Trim", &"Walk Forwards Trim", 0, &"Walk Forwards"]
 
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_soxnx"]
 
@@ -190,6 +190,7 @@ animation = &"movement_animations_1/Walk-Forwards"
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_y0rq4"]
 graph_offset = Vector2(-345.786, 38.8251)
+nodes/output/position = Vector2(660, 220)
 "nodes/Quick Slash/node" = SubResource("AnimationNodeAnimation_4e6lw")
 "nodes/Quick Slash/position" = Vector2(-620, 160)
 "nodes/Quick Slash Speed/node" = SubResource("AnimationNodeTimeScale_soxnx")
@@ -204,8 +205,7 @@ graph_offset = Vector2(-345.786, 38.8251)
 "nodes/Walk Forwards Speed/position" = Vector2(40, 380)
 "nodes/Walk Forwards Trim/node" = SubResource("AnimationNodeTimeSeek_ldaof")
 "nodes/Walk Forwards Trim/position" = Vector2(-220, 380)
-nodes/output/position = Vector2(660, 220)
-node_connections = [&"Quick Slash Speed", 0, &"Quick Slash Trim", &"Quick Slash Trim", 0, &"Quick Slash", &"Quick Slash and Walk Blend", 0, &"Quick Slash Speed", &"Quick Slash and Walk Blend", 1, &"Walk Forwards Speed", &"Walk Forwards Speed", 0, &"Walk Forwards Trim", &"Walk Forwards Trim", 0, &"Walk Forwards", &"output", 0, &"Quick Slash and Walk Blend"]
+node_connections = [&"output", 0, &"Quick Slash and Walk Blend", &"Quick Slash Speed", 0, &"Quick Slash Trim", &"Quick Slash Trim", 0, &"Quick Slash", &"Quick Slash and Walk Blend", 0, &"Quick Slash Speed", &"Quick Slash and Walk Blend", 1, &"Walk Forwards Speed", &"Walk Forwards Speed", 0, &"Walk Forwards Trim", &"Walk Forwards Trim", 0, &"Walk Forwards"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_1g7vj"]
 animation = &"combat_animations_1/Blocking"
@@ -457,7 +457,7 @@ nodes/Animation/node = SubResource("AnimationNodeAnimation_gmvi0")
 nodes/Animation/position = Vector2(-240, 120)
 nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_to2pe")
 nodes/TimeScale/position = Vector2(120, 120)
-node_connections = [&"TimeScale", 0, &"Animation", &"output", 0, &"TimeScale"]
+node_connections = [&"output", 0, &"TimeScale", &"TimeScale", 0, &"Animation"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2o0sj"]
 animation = &"movement_animations_1/Walk-Right"
@@ -470,7 +470,7 @@ nodes/Animation/node = SubResource("AnimationNodeAnimation_2o0sj")
 nodes/Animation/position = Vector2(-340, 120)
 nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_ee4p2")
 nodes/TimeScale/position = Vector2(80, 120)
-node_connections = [&"TimeScale", 0, &"Animation", &"output", 0, &"TimeScale"]
+node_connections = [&"output", 0, &"TimeScale", &"TimeScale", 0, &"Animation"]
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_pudql"]
 blend_point_0/node = SubResource("AnimationNodeAnimation_dotnv")
@@ -491,6 +491,7 @@ sync = true
 
 [resource]
 graph_offset = Vector2(941.866, 663.362)
+nodes/output/position = Vector2(8020, 1300)
 "nodes/Attack Forward Thrust/node" = SubResource("AnimationNodeBlendTree_ws83a")
 "nodes/Attack Forward Thrust/position" = Vector2(360, 1420)
 "nodes/Attack Inward Slash/node" = SubResource("AnimationNodeBlendTree_kb1f6")
@@ -601,5 +602,4 @@ nodes/Parry/position = Vector2(4260, 1020)
 "nodes/Walk Direction/position" = Vector2(-1120, 380)
 "nodes/Walk Speed/node" = SubResource("AnimationNodeTimeScale_1bqjp")
 "nodes/Walk Speed/position" = Vector2(-840, 380)
-nodes/output/position = Vector2(8020, 1300)
-node_connections = [&"Block", 0, &"Non Melee", &"Block", 1, &"Block Speed", &"Block Speed", 0, &"Block Trim", &"Block Trim", 0, &"Block Animation", &"Death", 0, &"Dizzy", &"Death", 1, &"Death Which One", &"Death 1 Speed", 0, &"Death 1 Trim", &"Death 1 Trim", 0, &"Death Animation", &"Death 2 Speed", 0, &"Death 2 Trim", &"Death 2 Trim", 0, &"Death Backstab Animation", &"Death Which One", 0, &"Death 1 Speed", &"Death Which One", 1, &"Death 2 Speed", &"Dizzy", 0, &"Parry", &"Dizzy", 1, &"Dizzy Which One", &"Dizzy From Damage", 0, &"Dizzy Kneeling Speed", &"Dizzy From Damage", 1, &"Kneeling Idle Speed", &"Dizzy From Damage", 2, &"Kneel to Stand Speed", &"Dizzy Kneeling Speed", 0, &"Dizzy Kneeling Trim", &"Dizzy Kneeling Trim", 0, &"Dizzy Kneeling Animation", &"Dizzy Which One", 0, &"Dizzy Idle Animation", &"Dizzy Which One", 1, &"Dizzy From Damage", &"Idle", 0, &"Idle Inactive Animation", &"Idle", 1, &"Idle Active Animation", &"Jog Speed", 0, &"Jog Animation", &"Kneel to Stand Speed", 0, &"Kneel to Stand Trim", &"Kneel to Stand Trim", 0, &"Kneel to Stand Animation", &"Kneeling Idle Speed", 0, &"Kneeling Idle Animation", &"Melee", 0, &"Movement", &"Melee", 1, &"Melee Attack", &"Melee Attack", 0, &"Attack Inward Slash", &"Melee Attack", 1, &"Attack Inward Slash Copy", &"Melee Attack", 2, &"Attack Outward Slash", &"Melee Attack", 3, &"Attack Outward Slash Copy", &"Melee Attack", 4, &"Attack Forward Thrust", &"Melee Attack", 5, &"Attack Quick Slash", &"Movement", 0, &"Idle", &"Movement", 1, &"Movement Method", &"Movement Method", 0, &"Walk Speed", &"Movement Method", 1, &"Jog Speed", &"Movement Method", 2, &"Run Speed", &"Non Melee", 0, &"Melee", &"Non Melee", 1, &"Non Melee Action", &"Non Melee Action", 0, &"Small Projectile", &"Non Melee Action", 1, &"Small Projectile Copy", &"Non Melee Action", 2, &"Big Projectile", &"Non Melee Action", 3, &"Big Projectile Copy", &"Non Melee Action", 4, &"Energy Beam", &"Non Melee Action", 5, &"Energy Beam Copy", &"Parry", 0, &"Block", &"Parry", 1, &"Parry Speed", &"Parry Speed", 0, &"Parry Trim", &"Parry Trim", 0, &"Parry Animation", &"Run Speed", 0, &"Run Direction", &"Walk Speed", 0, &"Walk Direction", &"output", 0, &"Death"]
+node_connections = [&"output", 0, &"Death", &"Block", 0, &"Non Melee", &"Block", 1, &"Block Speed", &"Block Speed", 0, &"Block Trim", &"Block Trim", 0, &"Block Animation", &"Death", 0, &"Dizzy", &"Death", 1, &"Death Which One", &"Death 1 Speed", 0, &"Death 1 Trim", &"Death 1 Trim", 0, &"Death Animation", &"Death 2 Speed", 0, &"Death 2 Trim", &"Death 2 Trim", 0, &"Death Backstab Animation", &"Death Which One", 0, &"Death 1 Speed", &"Death Which One", 1, &"Death 2 Speed", &"Dizzy", 0, &"Parry", &"Dizzy", 1, &"Dizzy Which One", &"Dizzy From Damage", 0, &"Dizzy Kneeling Speed", &"Dizzy From Damage", 1, &"Kneeling Idle Speed", &"Dizzy From Damage", 2, &"Kneel to Stand Speed", &"Dizzy Kneeling Speed", 0, &"Dizzy Kneeling Trim", &"Dizzy Kneeling Trim", 0, &"Dizzy Kneeling Animation", &"Dizzy Which One", 0, &"Dizzy Idle Animation", &"Dizzy Which One", 1, &"Dizzy From Damage", &"Idle", 0, &"Idle Inactive Animation", &"Idle", 1, &"Idle Active Animation", &"Jog Speed", 0, &"Jog Animation", &"Kneel to Stand Speed", 0, &"Kneel to Stand Trim", &"Kneel to Stand Trim", 0, &"Kneel to Stand Animation", &"Kneeling Idle Speed", 0, &"Kneeling Idle Animation", &"Melee", 0, &"Movement", &"Melee", 1, &"Melee Attack", &"Melee Attack", 0, &"Attack Inward Slash", &"Melee Attack", 1, &"Attack Inward Slash Copy", &"Melee Attack", 2, &"Attack Outward Slash", &"Melee Attack", 3, &"Attack Outward Slash Copy", &"Melee Attack", 4, &"Attack Forward Thrust", &"Melee Attack", 5, &"Attack Quick Slash", &"Movement", 0, &"Idle", &"Movement", 1, &"Movement Method", &"Movement Method", 0, &"Walk Speed", &"Movement Method", 1, &"Jog Speed", &"Movement Method", 2, &"Run Speed", &"Non Melee", 0, &"Melee", &"Non Melee", 1, &"Non Melee Action", &"Non Melee Action", 0, &"Small Projectile", &"Non Melee Action", 1, &"Small Projectile Copy", &"Non Melee Action", 2, &"Big Projectile", &"Non Melee Action", 3, &"Big Projectile Copy", &"Non Melee Action", 4, &"Energy Beam", &"Non Melee Action", 5, &"Energy Beam Copy", &"Parry", 0, &"Block", &"Parry", 1, &"Parry Speed", &"Parry Speed", 0, &"Parry Trim", &"Parry Trim", 0, &"Parry Animation", &"Run Speed", 0, &"Run Direction", &"Walk Speed", 0, &"Walk Direction"]

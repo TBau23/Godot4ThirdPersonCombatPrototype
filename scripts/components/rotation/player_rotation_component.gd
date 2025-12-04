@@ -7,7 +7,7 @@ var player: Player
 var _freelook_turn: bool = true
 var _turn_all_the_way: bool = false
 
-@onready var _camera_controller: CameraController = Globals.camera_controller
+@onready var _camera_controller = Globals.camera_controller
 
 
 func _ready() -> void:

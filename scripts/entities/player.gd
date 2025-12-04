@@ -74,7 +74,7 @@ func _physics_process(_delta: float) -> void:
 	elif Input.is_action_just_pressed("ui_text_backspace"):
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	elif Input.is_action_just_pressed("attack") and \
-	not checkpoint_system.at_checkpoint:
+	(not checkpoint_system or not checkpoint_system.at_checkpoint):
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
 	

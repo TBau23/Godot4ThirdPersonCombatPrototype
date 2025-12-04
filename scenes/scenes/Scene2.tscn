@@ -1,25 +1,25 @@
 [gd_scene load_steps=65 format=3 uid="uid://cd738rigq1w2v"]
 
-[ext_resource type="Script" path="res://scripts/systems/level.gd" id="1_e4p23"]
+[ext_resource type="Script" uid="uid://dt05i3lpvfgud" path="res://scripts/systems/level.gd" id="1_e4p23"]
 [ext_resource type="PackedScene" uid="uid://cy5wvw01aul4m" path="res://scenes/systems/CameraController.tscn" id="2_ebvse"]
 [ext_resource type="PackedScene" uid="uid://b075d85nmca7s" path="res://scenes/user_interface/UserInterface.tscn" id="3_im4q1"]
 [ext_resource type="PackedScene" uid="uid://dujukbu10vbmm" path="res://scenes/entities/Player.tscn" id="4_km71j"]
-[ext_resource type="Script" path="res://scripts/systems/backstab_system.gd" id="5_lt6ye"]
-[ext_resource type="Script" path="res://scripts/systems/dizzy_system.gd" id="6_yqv35"]
+[ext_resource type="Script" uid="uid://bh6g5rt5ddjmt" path="res://scripts/systems/backstab_system.gd" id="5_lt6ye"]
+[ext_resource type="Script" uid="uid://bvqptsboid874" path="res://scripts/systems/dizzy_system.gd" id="6_yqv35"]
 [ext_resource type="PackedScene" uid="uid://xg0hjxcilbsl" path="res://scenes/systems/LockOnSystem.tscn" id="7_j3kdn"]
 [ext_resource type="PackedScene" uid="uid://chqo23127k51m" path="res://scenes/systems/VoidDeathSystem.tscn" id="8_m1wb1"]
 [ext_resource type="PackedScene" uid="uid://y7vsh6qub2m1" path="res://scenes/systems/CheckpointSystem.tscn" id="8_sw1gf"]
 [ext_resource type="PackedScene" uid="uid://cchf2jr3d13xj" path="res://scenes/systems/MusicSystem.tscn" id="9_r1r5g"]
 [ext_resource type="ArrayOccluder3D" uid="uid://c6fnidkmdcr07" path="res://levels/level1/Level1Occluder.occ" id="10_74xf0"]
 [ext_resource type="PackedScene" uid="uid://dsubhagnir7ns" path="res://levels/level1/level1.blend" id="11_d4bpw"]
-[ext_resource type="Script" path="res://scripts/systems/world_environment.gd" id="11_vj8k8"]
+[ext_resource type="Script" uid="uid://5a8rjnjhqhyn" path="res://scripts/systems/world_environment.gd" id="11_vj8k8"]
 [ext_resource type="LightmapGIData" uid="uid://cysn4sfexxdfx" path="res://lightmaps/Scene2.lmbake" id="12_2poft"]
 [ext_resource type="PackedScene" uid="uid://k32oq3ivgjxf" path="res://scenes/miscellaneous/Checkpoint.tscn" id="12_clpmb"]
 [ext_resource type="Material" uid="uid://bi2l1p46blr1g" path="res://materials/grey1.tres" id="12_wrl4e"]
 [ext_resource type="NavigationMesh" uid="uid://dpoe5063jwo6m" path="res://levels/level1/Level1NavMesh.tres" id="13_fswrv"]
 [ext_resource type="PackedScene" uid="uid://ia1adrmqd0lf" path="res://scenes/components/utility/LockOnComponent.tscn" id="13_x5cut"]
 [ext_resource type="PackedScene" uid="uid://biuqyf53m0ive" path="res://scenes/systems/VoidArea.tscn" id="15_yey3c"]
-[ext_resource type="Script" path="res://scripts/systems/enemy_section.gd" id="16_fqjbt"]
+[ext_resource type="Script" uid="uid://nu8lnydokldr" path="res://scripts/systems/enemy_section.gd" id="16_fqjbt"]
 [ext_resource type="PackedScene" uid="uid://dmtsn22tgr3b1" path="res://scenes/entities/enemies/Swordsman.tscn" id="17_85uvr"]
 [ext_resource type="PackedScene" uid="uid://70i30fboge8u" path="res://levels/level2/level2.blend" id="19_bfis0"]
 [ext_resource type="ArrayOccluder3D" uid="uid://c7ki4y16gwvts" path="res://levels/level2/Level2Occluder.occ" id="19_m2u8q"]
@@ -525,7 +525,7 @@ transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -38.12
 curve = SubResource("Curve3D_xuf5h")
 
 [node name="PatrolInstance" parent="Level1/Enemies/Section/Patrols/PatrolPath" index="0"]
-transform = Transform3D(0.998368, 5.2118e-08, 0.056631, -5.8254e-08, 1, 1.06721e-07, -0.056631, -1.09851e-07, 0.998368, -3.08286, 8.43444e-07, -0.761535)
+transform = Transform3D(0.998368, -5.531883e-08, 0.056631044, 4.9352675e-08, 1, 1.067205e-07, -0.056631044, -1.0375706e-07, 0.998368, -3.0828564, 8.434442e-07, -0.7615354)
 progress = 3.49314
 patrol_type = 1
 stationary_time = 4.0
@@ -586,14 +586,14 @@ transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -4.203
 curve = SubResource("Curve3D_gv36s")
 
 [node name="PatrolInstance" parent="Level1/Enemies/Section2/Patrols/PatrolPath2" index="0"]
-transform = Transform3D(0.929935, 0, -0.36765, 0, 1, 0, 0.36765, 0, 0.929935, 4.55838, 0, 3.72453)
+transform = Transform3D(0.92993486, 0, -0.3676502, 0, 1, 0, 0.3676502, 0, 0.92993486, 4.55838, 0, 3.72453)
 
 [node name="PatrolPath3" parent="Level1/Enemies/Section2/Patrols" instance=ExtResource("33_nn4rv")]
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -10.1096, 20.9999, 4.19963)
 curve = SubResource("Curve3D_u7u52")
 
 [node name="PatrolInstance" parent="Level1/Enemies/Section2/Patrols/PatrolPath3" index="0"]
-transform = Transform3D(0.999952, -8.94209e-10, 0.00643096, -5.55096e-17, 1, 1.3904e-07, -0.00643096, -1.39041e-07, 0.999952, -1.98482, 1.90735e-06, 5.4693)
+transform = Transform3D(0.999952, -8.942093e-10, 0.006430964, -5.5509636e-17, 1, 1.390399e-07, -0.006430964, -1.3904082e-07, 0.999952, -1.98482, 1.90735e-06, 5.4693)
 patrol_type = 1
 
 [node name="Section3" type="Area3D" parent="Level1/Enemies"]
@@ -632,7 +632,7 @@ transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -26.02
 curve = SubResource("Curve3D_kback")
 
 [node name="PatrolInstance" parent="Level1/Enemies/Section3/Patrols/PatrolPath4" index="0"]
-transform = Transform3D(0.999598, 0, -0.0273865, 0, 1, 0, 0.0273865, 0, 0.999598, -3.9614, 1.90735e-06, 12.2958)
+transform = Transform3D(0.99996895, 0, -0.0028968723, 0, 1, 0, 0.0028968723, 0, 0.99996895, -3.9614, 1.90735e-06, 12.2958)
 patrol_type = 0
 
 [node name="PatrolPath5" parent="Level1/Enemies/Section3/Patrols" instance=ExtResource("33_nn4rv")]
@@ -640,7 +640,7 @@ transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -22.35
 curve = SubResource("Curve3D_l2du8")
 
 [node name="PatrolInstance" parent="Level1/Enemies/Section3/Patrols/PatrolPath5" index="0"]
-transform = Transform3D(-0.818695, 7.22047e-06, 0.574181, -6.82102e-13, 1, -1.25746e-05, -0.574181, -1.02953e-05, -0.818695, 9.83592, -1.27105, -7.16184)
+transform = Transform3D(-0.94607717, 1.4066314e-05, 0.3238572, 9.094699e-13, 1, -4.343132e-05, -0.3238572, -4.1091622e-05, -0.94607717, 9.83592, -1.27105, -7.16184)
 patrol_type = 0
 
 [node name="Level2" type="Node3D" parent="."]
@@ -1007,11 +1007,11 @@ transform = Transform3D(0.999997, 1.95272e-10, 0.00223365, 0, -1, 8.74228e-08, 0
 curve = SubResource("Curve3D_k0rjm")
 
 [node name="PatrolInstance" parent="Level2/Enemies/Section1/Patrols/PatrolPath" index="0"]
-transform = Transform3D(0.999955, -0.000353127, -0.00594041, -4.36546e-11, 0.998238, -0.0593373, 0.00595088, 0.0593377, 0.998196, -2.8545, -0.217763, -1.43186)
+transform = Transform3D(0.999955, -0.00035312734, -0.005940414, -4.3654552e-11, 0.998238, -0.05933729, 0.0059508816, 0.05933768, 0.9981961, -2.8544989, -0.217763, -1.4318645)
 h_offset = 0.5
 
 [node name="PatrolInstance2" parent="Level2/Enemies/Section1/Patrols/PatrolPath" instance=ExtResource("34_v3sil")]
-transform = Transform3D(0.999955, -0.000353127, -0.00594041, -4.36546e-11, 0.998238, -0.0593373, 0.00595088, 0.0593377, 0.998196, -3.85448, -0.217763, -1.43782)
+transform = Transform3D(0.999955, -0.00035312734, -0.005940414, -4.3654552e-11, 0.998238, -0.05933729, 0.0059508816, 0.05933768, 0.9981961, -3.8544812, -0.217763, -1.4378154)
 h_offset = -0.5
 initial_delay = 1.0
 
@@ -1020,7 +1020,7 @@ transform = Transform3D(0.999997, 1.95272e-10, 0.00223365, 0, -1, 8.74228e-08, 0
 curve = SubResource("Curve3D_djk2n")
 
 [node name="PatrolInstance" parent="Level2/Enemies/Section1/Patrols/PatrolPath2" index="0"]
-transform = Transform3D(-0.901254, -0.0268908, -0.432393, -9.31297e-10, 0.998072, -0.0620674, 0.433228, -0.0559416, -0.899516, -6.56863, -0.614233, -9.49697)
+transform = Transform3D(-0.6884102, -0.06399459, -0.72245526, -3.7251884e-09, 0.9961001, -0.088229, 0.72528386, -0.060741078, -0.6857254, -6.56863, -0.614233, -9.49697)
 patrol_type = 1
 
 [node name="Section2" parent="Level2/Enemies" instance=ExtResource("25_7opv3")]
@@ -1074,7 +1074,7 @@ transform = Transform3D(0.999997, 1.95272e-10, 0.00223365, 0, -1, 8.74228e-08, 0
 curve = SubResource("Curve3D_cskke")
 
 [node name="PatrolInstance" parent="Level2/Enemies/Section2/Patrols/PatrolPath" index="0"]
-transform = Transform3D(0.500817, 0, -0.865522, 0, 1, 0, 0.865522, 0, 0.500817, -0.679497, -4.19617e-05, 0.351147)
+transform = Transform3D(0.4863449, 0, -0.873736, 0, 1, 0, 0.873736, 0, 0.4863449, -0.679497, -4.19617e-05, 0.351147)
 
 [node name="Section3" parent="Level2/Enemies" instance=ExtResource("25_7opv3")]
 transform = Transform3D(0.919623, 0, -0.392803, 0, 1, 0, 0.392803, 0, 0.919623, -80.6162, 0, 99.1345)
@@ -1138,7 +1138,7 @@ transform = Transform3D(0.999997, 1.95272e-10, 0.00223365, 0, -1, 8.74228e-08, 0
 curve = SubResource("Curve3D_spjee")
 
 [node name="PatrolInstance" parent="Level2/Enemies/Section4/Patrols/PatrolPath" index="0"]
-transform = Transform3D(-0.674251, 0, 0.738465, 0, 1, 0, -0.738465, 0, -0.674251, 3.4126, 9.53674e-06, -4.40655)
+transform = Transform3D(-0.67425084, 0, 0.7384652, 0, 1, 0, -0.7384652, 0, -0.67425084, 3.4126, 9.53674e-06, -4.40655)
 patrol_type = 1
 stationary_time = 4.0
 
@@ -1147,7 +1147,7 @@ transform = Transform3D(0.999997, 1.95272e-10, 0.00223365, 0, -1, 8.74228e-08, 0
 curve = SubResource("Curve3D_rph8f")
 
 [node name="PatrolInstance" parent="Level2/Enemies/Section4/Patrols/PatrolPath2" index="0"]
-transform = Transform3D(0.524238, 0, 0.85154, 0, 1, 0, -0.85154, 0, 0.524238, 6.50872, -5.34058e-05, -6.47911)
+transform = Transform3D(0.5242379, 0, 0.8515401, 0, 1, 0, -0.8515401, 0, 0.5242379, 6.5087223, -5.34058e-05, -6.4791107)
 progress = 21.9635
 
 [node name="VoidColliders" type="Node3D" parent="Level2"]

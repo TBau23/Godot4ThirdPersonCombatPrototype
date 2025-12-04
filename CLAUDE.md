@@ -1,0 +1,2 @@
+- use beads for task management and planning
+- bd quickstart will get you started
